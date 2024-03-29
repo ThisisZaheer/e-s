@@ -1,4 +1,6 @@
+MYSQL_PASSWORD=$1
 log_file=/tmp/expense.log
+
 echo -e "\e[33m Disable Default version of NodeJs\e[0m"
 dnf module disable nodejs -y &>>$log_file
 
@@ -41,4 +43,4 @@ echo -e "\e[33m Install Mysql Client\e[0m"
 dnf install mysql -y &>>$log_file
 
 echo -e "\e[33m Load Schema\e[0m"
-mysql -h mysql-dev.iamzaheer.online -uroot -p${$1} < /app/schema/backend.sql &>>$log_file
+mysql -h mysql-dev.iamzaheer.online -uroot -p${MYSQL_PASSWORD} < /app/schema/backend.sql &>>$log_file
