@@ -41,4 +41,4 @@ echo -e "\e[33m Install Mysql Client\e[0m"
 dnf install mysql -y &>>$log_file
 
 echo -e "\e[33m Load Schema\e[0m"
-mysql -h mysql-dev.iamzaheer.online -uroot -p$2 < /app/schema/backend.sql &>>$log_file
+mysql -h mysql-dev.iamzaheer.online -uroot -p$1 < /app/schema/backend.sql &>>$log_file
