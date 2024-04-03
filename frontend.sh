@@ -15,7 +15,9 @@ cd /usr/share/nginx/html
 echo Extracting the App content
 unzip /tmp/frontend.zip
 
-echo Enable & Start Nginx Service
+echo Enable the nginx Service
 systemctl enable nginx
+
+echo Restart the nginx service
 systemctl restart nginx
 
