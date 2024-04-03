@@ -42,6 +42,7 @@ echo $?
 cd /app &>>$log_file
 
 
+
 Head "Extract the Application Content"
 unzip /tmp/backend.zip &>>$log_file
 echo $?
