@@ -2,8 +2,9 @@ log_file=/tmp/expense.log
 
 Head() {
   
-  echo -e "\e[31m$1\e[0m"
+  echo -e "\e[36m$1\e[0m"
 }
+
 Head "Install Nginx Server"
 dnf install nginx -y &>>$log_file
 
